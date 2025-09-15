@@ -1,0 +1,17 @@
+body{
+    background-image: url("weather.png");
+    background-size: cover;
+    background-repeat: no-repeat ;
+}
+.heading{
+    font-size: 44px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    letter-spacing: normal;
+    font-weight: bold;
+    color: azure;
+}
+
+.paragraph1{
+    text-align: center;
+}

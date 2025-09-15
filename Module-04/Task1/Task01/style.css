@@ -1,0 +1,141 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+    }
+
+    .dashboard {
+      display: grid;
+      grid-template-columns: 220px  1fr;
+      grid-template-rows: 60px 1fr;
+      grid-template-areas: 
+        "sidebar header"
+        "sidebar main"
+        "sidebar footer";
+      height: 100vh;
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+      background: #333;
+      color: #fff;
+      padding: 1rem;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 2rem;
+    }
+
+    .sidebar button {
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.7rem;
+      border: none;
+      background: #555;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .sidebar button:hover {
+      background: #777;
+    }
+
+    .header {
+      grid-area: header;
+      background: #222;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1rem;
+    }
+
+    .header button {
+      background: #e74c3c;
+      border: none;
+      padding: 0.5rem 1rem;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .header button:hover {
+      background: #c0392b;
+    }
+
+    .main {
+      grid-area: main;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .card h3 {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .sales, .orders {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .sales {
+      min-height: 150px;
+    }
+
+    .orders table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 0.5rem;
+    }
+
+    .orders th, .orders td {
+      text-align: left;
+      padding: 0.5rem;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .orders th {
+      font-weight: bold;
+    }
+
+    .footer {
+      grid-area: footer;
+      background: #222;
+      color: white;
+      text-align: center;
+      line-height: 40px;
+      font-size: 14px;
+    }
