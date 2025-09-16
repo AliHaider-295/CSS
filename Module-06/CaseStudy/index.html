@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Budget Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <h1>💲 Personal Budget Tracker</h1>
+    <button class="cancel-btn">Cancel</button>
+  </nav>
+
+  <main class="main-container">
+    <div class="left-column">
+      <section class="card balance-summary">
+        <h3>📑 Balance Summary</h3>
+        <p>Current Balance <span class="balance">$0.00</span></p>
+        <div class="summary">
+          <div class="income-box">
+            <p>⬆️ Total Income</p>
+            <span class="income">$0.00</span>
+          </div>
+          <div class="expense-box">
+            <p>⬇️ Total Expenses</p>
+            <span class="expense">$0.00</span>
+          </div>
+        </div>
+      </section>
+      <section class="card add-transaction">
+        <h3>📝 Add Transaction</h3>
+        <div class="type">
+          <button class="btn-income">Income</button>
+          <button class="btn-expense">Expense</button>
+        </div>
+        <form>
+          <label>Amount</label>
+          <input type="number" placeholder="$ 0.00" required>
+          
+          <label>Description</label>
+          <input type="text" placeholder="What was this for?" required>
+          
+          <label>Category</label>
+          <select>
+            <option>Utilities</option>
+            <option>Food</option>
+            <option>Transport</option>
+            <option>Other</option>
+          </select>
+          <button type="submit" class="btn-add">Add Transaction</button>
+        </form>
+      </section>
+
+      <section class="card statistics">
+        <h3>⏱ Statistics</h3>
+        <p>Total Transactions: 0</p>
+        <p>Income Transactions: 0</p>
+        <p>Expense Transactions: 0</p>
+      </section>
+    </div>
+    <div class="right-column">
+      <section class="card transactions">
+        <h3>📋 Transactions</h3>
+        <div class="filters">
+          <select>
+            <option>All Types</option>
+          </select>
+          <select>
+            <option>All Categories</option>
+          </select>
+        </div>
+        <p class="no-data">No transactions found. Add a transaction to get started!</p>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <p>Personal Budget Tracker © 2025</p>
+  </footer>
+</body>
+</html>
